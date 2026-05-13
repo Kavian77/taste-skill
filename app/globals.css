@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+/* V1 - Warm Editorial Theme */
+:root {
+  /* Canvas */
+  --v1-background: #F7F6F3;
+  --v1-background-alt: #FFFFFF;
+  --v1-foreground: #2F3437;
+  --v1-foreground-muted: #787774;
+  
+  /* Accent */
+  --v1-accent: #8B4513;
+  --v1-accent-muted: #A0826D;
+  
+  /* Borders */
+  --v1-border: #EAEAEA;
+  --v1-border-strong: #D4D4D4;
+  
+  /* Semantic */
+  --v1-success: #346538;
+  --v1-success-bg: #EDF3EC;
+}
+
+/* V2 - Bold Contemporary Theme */
+:root {
+  /* Canvas */
+  --v2-background: #050505;
+  --v2-background-card: #0A0A0A;
+  --v2-foreground: #FAFAFA;
+  --v2-foreground-muted: #A1A1AA;
+  
+  /* Accent - Cherry red */
+  --v2-accent: #E11D48;
+  --v2-accent-glow: rgba(225, 29, 72, 0.3);
+  
+  /* Glass */
+  --v2-glass: rgba(255, 255, 255, 0.05);
+  --v2-glass-border: rgba(255, 255, 255, 0.1);
+  
+  /* Gradients */
+  --v2-gradient-start: #E11D48;
+  --v2-gradient-end: #F97316;
+}
+
+/* V3 - Swiss Industrial Theme */
+:root {
+  /* Canvas - Light industrial paper */
+  --v3-background: #F4F4F0;
+  --v3-background-alt: #EAE8E3;
+  --v3-foreground: #050505;
+  --v3-foreground-muted: #666666;
+  
+  /* Accent - Industrial red */
+  --v3-accent: #E61919;
+  
+  /* Borders */
+  --v3-border: #050505;
+  --v3-border-light: #CCCCCC;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-newsreader);
+}
+
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+/* Animation utilities */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+/* Stagger delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* Premium scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(139, 69, 19, 0.2);
+}
